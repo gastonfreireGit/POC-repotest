@@ -1,6 +1,6 @@
 #FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build-env
-ARG REPO=mcr.microsoft.com/dotnet/runtime
-FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build-env
+FROM arm64v8/alpine:3.7
+COPY qemu-aarch64-static /usr/bin/
 
 #RUN apt update && apt install nano -y
 RUN curl -SL -o aspnetcore.tar.gz https://dotnetcli.azureedge.net/dotnet/aspnetcore/Runtime/3.1.0/aspnetcore-runtime-3.1.0-linux-musl-arm64.tar.gz
