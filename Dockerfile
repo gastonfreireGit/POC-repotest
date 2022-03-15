@@ -1,6 +1,6 @@
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1.402-bionic-arm64v8 AS build-env
 
-RUN apt update && apt install nano -y
+#RUN apt update && apt install nano -y
 #RUN apt-get install qemu qemu-user-static binfmt-support debootstrap -y
 #RUN curl -SL -o dotnet.tar.gz https://dotnetcli.blob.core.windows.net/dotnet/Sdk/master/dotnet-sdk-latest-linux-arm64.tar.gz
 #RUN sudo mkdir -p /usr/share/dotnet
