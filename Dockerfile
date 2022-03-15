@@ -3,7 +3,7 @@ ARG REPO=mcr.microsoft.com/dotnet/runtime
 FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build-env
 
 #RUN apt update && apt install nano -y
-RUN wget -O aspnetcore.tar.gz https://dotnetcli.azureedge.net/dotnet/aspnetcore/Runtime/3.1.0/aspnetcore-runtime-3.1.0-linux-musl-arm64.tar.gz
+RUN curl -SL -o aspnetcore.tar.gz https://dotnetcli.azureedge.net/dotnet/aspnetcore/Runtime/3.1.0/aspnetcore-runtime-3.1.0-linux-musl-arm64.tar.gz
 RUN mkdir -p /usr/share/dotnet
 RUN tar -oxzf aspnetcore.tar.gz -C /usr/share/dotnet ./shared/Microsoft.AspNetCore.App
 #RUN ln -s /usr/share/dotnet/dotnet /usr/bin/dotnet
